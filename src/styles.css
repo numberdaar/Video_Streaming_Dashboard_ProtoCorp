@@ -1,0 +1,17 @@
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{margin:0;background:#0f1724;color:#e6eef8}
+header p{opacity:0.8}
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:12px;
+}
+.card{
+  background:#071025;
+  padding:8px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6);
+}
+.controls{display:flex;gap:8px;align-items:center;margin-top:8px}
+button{background:#0ea5a4;border:none;padding:8px 10px;border-radius:6px;color:white;cursor:pointer}
+small{opacity:0.8}
