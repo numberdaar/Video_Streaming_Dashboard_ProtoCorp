@@ -8,7 +8,7 @@
 # - For streams 2..6, we apply a small presentation timestamp offset (setpts) to simulate slight
 #  differences (delays) while keeping content identical. This is useful for testing synchronization logic.
 #
-# Example usage:
+# Examples usage:
 # chmod +x generate_hls.sh
 # ./generate_hls.sh rtsp://13.60.76.79:8554/live
 #
