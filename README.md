@@ -27,7 +27,7 @@ We use **FFmpeg** to convert a single RTSP feed into 6 independent HLS playlists
 **Example RTSP source:**
 
 ```
-rtsp://13.60.76.79:8554/live
+rtsp://13.60.76.79:8554/live2
 ```
 
 FFmpeg reads the RTSP stream via TCP and produces `.m3u8` + `.ts` segments.
@@ -148,13 +148,13 @@ http://localhost:8080
 
 ```
 chmod +x generate_hls.sh
-./generate_hls.sh rtsp://13.60.76.79:8554/live
+./generate_hls.sh rtsp://13.60.76.79:8554/live2
 ```
 
 ### 🔸 On Windows (PowerShell):
 
 ```
-.\generate_hls.bat rtsp://13.60.76.79:8554/live
+.\generate_hls.bat rtsp://13.60.76.79:8554/live2
 ```
 
 This will generate:
@@ -189,29 +189,6 @@ http://localhost:8080/hls/stream2/index.m3u8
 ...
 http://localhost:8080/hls/stream6/index.m3u8
 ```
-
-If FFmpeg runs on a different machine, update `Dashboard.jsx` accordingly.
-
----
-
-# ⚠️ Limitations & Future Improvements
-
-### 🔸 Browser autoplay restrictions  
-Use the **Play All** button.
-
-### 🔸 HLS is not ideal for real-time sync  
-Better alternatives:
-- LL-HLS  
-- CMAF  
-- WebRTC  
-- RTMP + synchronized packaging  
-- Timestamp-aligned encoders  
-
-### 🔸 Sync is best-effort  
-Real sync requires:
-- Server-side timestamp alignment  
-- Identical GOP & segment timing  
-- Real-time protocol (WebRTC)  
 
 ---
 
